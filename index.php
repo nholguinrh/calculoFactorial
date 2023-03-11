@@ -9,8 +9,8 @@ function obtieneFactorial($numero){
     return $factorial; 
 } 
    
-//Ejemplo
-$numero = 5; 
+
+$numero = (isset($_GET["n"]))? $_GET["n"]:5; 
 $resultado = obtieneFactorial($numero); 
 echo "Factorial de $numero  = $resultado"; 
 ?> 
