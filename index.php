@@ -21,8 +21,9 @@ for($i=0;$i<$iteraciones;$i++)
     modeloInsertFactorial($n,$resultado);
     $sqrt=ceil(sqrt($resultado));
     $suma+=ceil(sqrt($resultado));
-    for($j=0;$j<count($resultado);$j++)
-        $k++;
+    $k=0;
+    for($j=0;$j<$resultado;$j++)
+        $k+=$sqrt(obtieneFactorial($n));
     echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
     }
 echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
