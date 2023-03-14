@@ -9,11 +9,12 @@ function obtieneFactorial($numero){
     } 
     return $factorial; 
 } 
-   
+  
+modeloVaciarFactorial();
 
-$numero = (isset($_GET["cantidad"]))? $_GET["cantidad"]:5; 
+$iteraciones = (isset($_GET["cantidad"]))? $_GET["cantidad"]:5; 
 $suma=0;
-for($i=0;$i<$numero;$i++)
+for($i=0;$i<$iteraciones;$i++)
     {
     $n=rand(1,120);
     $resultado = obtieneFactorial($n);
@@ -22,7 +23,7 @@ for($i=0;$i<$numero;$i++)
     $suma+=ceil(sqrt($resultado));
     echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt."\n<br>";
     }
-
+echo "suma para consumo de RAM ".$suma." *****************************************************/n<br>";
 $salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
     {
