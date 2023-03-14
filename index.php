@@ -23,7 +23,7 @@ for($i=0;$i<$iteraciones;$i++)
     $suma+=ceil(sqrt($resultado));
     $k=0;
     for($j=0;$j<$resultado;$j++)
-        $k+=$sqrt(obtieneFactorial($n));
+        $k+=sqrt(obtieneFactorial($n));
     echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
     }
 echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
