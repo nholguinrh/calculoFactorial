@@ -17,6 +17,12 @@ function modeloInsertFactorial($base,$factorial)
     $sql="INSERT INTO factorial (`base`,`factorial`) VALUES ($base,$factorial)";
     $mysqli->query($sql);
     }
+function modeloVaciarFactorial()
+    {
+    global $mysqli;
+    $sql="TRUNCATE TABLE factorial";
+    $mysqli->query($sql);
+    }
 function modeloListFactorial()
     {
     global $mysqli;
