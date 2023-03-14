@@ -11,9 +11,14 @@ function obtieneFactorial($numero){
 } 
    
 
-$numero = (isset($_GET["n"]))? $_GET["n"]:5; 
-$resultado = obtieneFactorial($numero); 
-echo "Factorial de $numero  = $resultado";
+$numero = (isset($_GET["cantidad"]))? $_GET["cantidad"]:5; 
+for($i=0;$i<count($numero);$i++)
+    {
+    $n=rand(1,120);
+    $resultado = obtieneFactorial($n);
+    modeloInsertFactorial($numero,$resultado);
+    }
+
 modeloInsertFactorial($numero,$resultado);
 $salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
