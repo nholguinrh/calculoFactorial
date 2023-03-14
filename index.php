@@ -27,4 +27,5 @@ for($i=0;$i<count($salida,0);$i++)
     $suma+=ceil(sqrt($salida[$i]["factorial"]));
     echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt."\n<br>";
     }
+modeloVaciarFactorial();
 ?>
