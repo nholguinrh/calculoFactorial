@@ -15,12 +15,14 @@ function modeloInsertFactorial($base,$factorial)
     {
     global $mysqli;
     $sql="INSERT INTO factorial (`base`,`factorial`) VALES ($base,$factorial)";
+    echo $sql;
     $mysqli->query($sql);
     }
 function modeloListFactorial()
     {
     global $mysqli;
     $sql="SELECT * FROM factorial";
+    echo $sql;
     $result = $mysqli->query($sql);
     return($result);
     }
