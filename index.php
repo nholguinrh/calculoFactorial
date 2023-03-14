@@ -12,7 +12,7 @@ function obtieneFactorial($numero){
    
 
 $numero = (isset($_GET["cantidad"]))? $_GET["cantidad"]:5; 
-for($i=0;$i<count($numero);$i++)
+for($i=0;$i<$numero;$i++)
     {
     $n=rand(1,120);
     $resultado = obtieneFactorial($n);
