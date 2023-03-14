@@ -24,6 +24,6 @@ $salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
     {
     $sqrt=ceil(sqrt($salida[$i]["factorial"]));
-    echo "El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt."\n<br>";
+    echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt."\n<br>";
     }
 ?>
