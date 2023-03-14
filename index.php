@@ -16,7 +16,6 @@ $resultado = obtieneFactorial($numero);
 echo "Factorial de $numero  = $resultado";
 modeloInsertFactorial($numero,$resultado);
 $salida=modeloListFactorial();
-print_r($salida);
 for($i=0;$i<count($salida,0);$i++)
-    echo "El factorial de ".$salida[$i][0]." es : ".$salida[$i][1];
+    echo "El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]."\n<br>";
 ?>
