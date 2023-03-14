@@ -21,13 +21,13 @@ for($i=0;$i<$iteraciones;$i++)
     modeloInsertFactorial($n,$resultado);
     $sqrt=ceil(sqrt($resultado));
     $suma+=ceil(sqrt($resultado));
-    echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt."\n<br>";
+    echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
     }
-echo "suma para consumo de RAM ".$suma." *****************************************************/n<br>";
+echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
 $salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
     {
-    echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt."\n<br>";
+    echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
     }
 modeloVaciarFactorial();
 ?>
