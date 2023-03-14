@@ -11,10 +11,11 @@ if ($mysqli->connect_error) {
     die("Fallo la conexion <br> " . $mysqli->connect_error);
 }
 
-function modeloInsertFactorial($base,$factorial)
+function modeloInsertFactorial($hostname,$suma)
     {
     global $mysqli;
-    $sql="INSERT INTO factorial (`base`,`factorial`) VALUES ($base,$factorial)";
+    $fecha=time();
+    $sql="INSERT INTO factorial (`hostname`,`fecha`,`suma`) VALUES ($hostname,$fecha,$suma)";
     $mysqli->query($sql);
     }
 function modeloVaciarFactorial()
