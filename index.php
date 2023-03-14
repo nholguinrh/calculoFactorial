@@ -9,8 +9,6 @@ function obtieneFactorial($numero){
     } 
     return $factorial; 
 } 
-  
-modeloVaciarFactorial();
 
 $iteraciones = (isset($_GET["cantidad"]))? $_GET["cantidad"]:5; 
 $suma=0;
@@ -18,7 +16,6 @@ for($i=0;$i<$iteraciones;$i++)
     {
     $n=rand(1,120);
     $resultado = obtieneFactorial($n);
-    modeloInsertFactorial($n,$resultado);
     $sqrt=ceil(sqrt($resultado));
     $suma+=ceil(sqrt($resultado));
     $k=0;
@@ -27,10 +24,11 @@ for($i=0;$i<$iteraciones;$i++)
     echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
     }
 echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
+$hostname = gethostname();
+modeloInsertFactorial($hostname,$suma);
 $salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
     {
-    echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
+    echo $i." => Desde el pod ".$salida[$i]["hostname"]." | fecha ".date("l",$salida[$i]["hostname"])." | suma:".$suma." \r\n <br>";
     }
-modeloVaciarFactorial();
 ?>
