@@ -21,9 +21,12 @@ function modeloInsertFactorial($base,$factorial)
 function modeloListFactorial()
     {
     global $mysqli;
+    $salida=array();
     $sql="SELECT * FROM factorial";
     echo $sql;
     $result = $mysqli->query($sql);
+    for($i=0;$i<$result->num_rows;$i++)
+            $salida[]=$result->fetch_array(MYSQLI_BOTH);
     return($result);
     }
 ?>
