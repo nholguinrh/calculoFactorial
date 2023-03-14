@@ -14,7 +14,7 @@ if ($mysqli->connect_error) {
 function modeloInsertFactorial($base,$factorial)
     {
     global $mysqli;
-    $sql="INSERT INTO factorial (`base`,`factorial`) VALES ($base,$factorial)";
+    $sql="INSERT INTO factorial (`base`,`factorial`) VALUES ($base,$factorial)";
     echo $sql;
     $mysqli->query($sql);
     }
