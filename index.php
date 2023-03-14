@@ -20,7 +20,7 @@ for($i=0;$i<$numero;$i++)
     modeloInsertFactorial($n,$resultado);
     $sqrt=ceil(sqrt($resultado));
     $suma+=ceil(sqrt($resultado));
-    echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt."\n<br>";
+    echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt."\n<br>";
     }
 
 $salida=modeloListFactorial();
