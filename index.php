@@ -18,13 +18,14 @@ for($i=0;$i<$numero;$i++)
     $n=rand(1,120);
     $resultado = obtieneFactorial($n);
     modeloInsertFactorial($n,$resultado);
+    $sqrt=ceil(sqrt($resultado));
+    $suma+=ceil(sqrt($resultado));
+    echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt."\n<br>";
     }
 
 $salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
     {
-    $sqrt=ceil(sqrt($salida[$i]["factorial"]));
-    $suma+=ceil(sqrt($salida[$i]["factorial"]));
     echo $i." => El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]." y el entero de la raiz del factorial".$sqrt."\n<br>";
     }
 modeloVaciarFactorial();
