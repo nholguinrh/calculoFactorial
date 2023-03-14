@@ -12,14 +12,14 @@ function obtieneFactorial($numero){
    
 
 $numero = (isset($_GET["cantidad"]))? $_GET["cantidad"]:5; 
+
 for($i=0;$i<$numero;$i++)
     {
     $n=rand(1,120);
     $resultado = obtieneFactorial($n);
-    modeloInsertFactorial($numero,$resultado);
+    modeloInsertFactorial($n,$resultado);
     }
 
-modeloInsertFactorial($numero,$resultado);
 $salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
     echo "El factorial de ".$salida[$i]["base"]." es : ".$salida[$i]["factorial"]."\n<br>";
