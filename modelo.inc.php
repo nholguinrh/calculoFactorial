@@ -27,6 +27,6 @@ function modeloListFactorial()
     $result = $mysqli->query($sql);
     for($i=0;$i<$result->num_rows;$i++)
             $salida[]=$result->fetch_array(MYSQLI_BOTH);
-    return($result);
+    return($salida);
     }
 ?>
