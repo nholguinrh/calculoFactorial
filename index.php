@@ -24,10 +24,10 @@ for($i=0;$i<$iteraciones;$i++)
     echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
     }
 echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
+
 $hostname = gethostname();
 modeloInsertFactorial($hostname,$suma);
 $salida=modeloListFactorial();
-//print_r($salida);
 for($i=0;$i<count($salida,0);$i++)
     {
     echo $i." => Desde el pod ".$salida[$i]["hostname"]." | fecha ".date(DATE_RFC2822,$salida[$i]["fecha"])." | suma:".$salida[$i]["suma"]." \r\n <br>";
