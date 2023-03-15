@@ -30,6 +30,6 @@ $salida=modeloListFactorial();
 //print_r($salida);
 for($i=0;$i<count($salida,0);$i++)
     {
-    echo $i." => Desde el pod ".$salida[$i]["hostname"]." | fecha ".date("l",$salida[$i]["fecha"])." | suma:".$salida[$i]["suma"]." \r\n <br>";
+    echo $i." => Desde el pod ".$salida[$i]["hostname"]." | fecha ".date(DATE_RFC2822,$salida[$i]["fecha"])." | suma:".$salida[$i]["suma"]." \r\n <br>";
     }
 ?>
