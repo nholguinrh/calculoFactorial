@@ -15,7 +15,7 @@ function modeloInsertFactorial($hostname,$suma)
     {
     global $mysqli;
     $fecha=time();
-    $sql="INSERT INTO factorial (`hostname`,`fecha`,`suma`) VALUES ($hostname,$fecha,$suma)";
+    $sql="INSERT INTO factorial (`hostname`,`fecha`,`suma`) VALUES ('".$hostname."',$fecha,$suma)";
     echo $sql;
     $mysqli->query($sql);
     }
