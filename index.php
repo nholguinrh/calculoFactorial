@@ -25,12 +25,11 @@ for($i=0;$i<$iteraciones;$i++)
     }
 echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
 $hostname = gethostname();
-echo $hostname;
 modeloInsertFactorial($hostname,$suma);
 $salida=modeloListFactorial();
-print_r($salida);
+//print_r($salida);
 for($i=0;$i<count($salida,0);$i++)
     {
-    echo $i." => Desde el pod ".$salida[$i]["hostname"]." | fecha ".date("l",$salida[$i]["hostname"])." | suma:".$suma." \r\n <br>";
+    echo $i." => Desde el pod ".$salida[$i]["hostname"]." | fecha ".date("l",$salida[$i]["fecha"])." | suma:".$salida[$i]["suma"]." \r\n <br>";
     }
 ?>
