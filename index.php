@@ -16,15 +16,15 @@ for($i=0;$i<$iteraciones;$i++)
     {
     $n=rand(1,120);
     $resultado = obtieneFactorial($n);
-    $sqrt=ceil(sqrt($resultado));
+    /*$sqrt=ceil(sqrt($resultado));
     $suma+=ceil(sqrt($resultado));
     $k=0;
     for($j=0;$j<$resultado;$j++)
-        $k+=sqrt(obtieneFactorial($n));
+        $k+=sqrt(obtieneFactorial($n));*/
     echo $i." => El factorial de ".$n." es : ".$resultado." y el entero de la raiz del factorial".$sqrt." \r\n <br>";
     }
 echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
-$hostname = gethostname();
+//$hostname = gethostname();
 //modeloInsertFactorial($hostname,$suma);
 /*$salida=modeloListFactorial();
 for($i=0;$i<count($salida,0);$i++)
