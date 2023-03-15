@@ -1,6 +1,6 @@
 <?php
 include "modelo.inc.php";
-modeloVaciarFactorial()
+modeloVaciarFactorial();
 header("Location: index.php");
 exit;
 ?>
