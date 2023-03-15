@@ -1,5 +1,4 @@
 <?php 
-include "modelo.inc.php";
 // Código PHP para obtener el factorial de un número
 // función para obtener factorial de forma iterativa
 function obtieneFactorial($numero){ 
@@ -26,8 +25,10 @@ for($i=0;$i<$iteraciones;$i++)
 echo "suma para consumo de RAM ".$suma." ***************************************************** \n\r <br>";
 
 $hostname = gethostname();
+include "modelo.inc.php";
 modeloInsertFactorial($hostname,$suma);
 $salida=modeloListFactorial();
+$mysqli->close();
 for($i=0;$i<count($salida,0);$i++)
     {
     echo $i." => Desde el pod ".$salida[$i]["hostname"]." | fecha ".date(DATE_RFC2822,$salida[$i]["fecha"])." | suma:".$salida[$i]["suma"]." \r\n <br>";
